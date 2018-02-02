@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [SmokeSuite]">
+  <parameter name="mobilePlatform" value="iOS"/>
+  <test name="SmokeRegistration">
+    <classes>
+      <class name="testclasses.IosAdminBoardsPageTest"/>
+    </classes>
+  </test> <!-- SmokeRegistration -->
+  <test name="SmokeRegistration(failed)">
+    <classes>
+      <class name="testclasses.IosAdminBoardsPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="verifyConvertTaskWithValidData"/>
+          <include name="verifyMessage"/>
+          <include name="verifyConvertTaskWithBlankData"/>
+          <include name="verifyWriteCommentEithInValidData"/>
+          <include name="verifyWriteCommentEithValidData"/>
+        </methods>
+      </class> <!-- testclasses.IosAdminBoardsPageTest -->
+    </classes>
+  </test> <!-- SmokeRegistration(failed) -->
+</suite> <!-- Failed suite [SmokeSuite] -->

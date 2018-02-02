@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+
+<suite name="Main Test Suite" parallel="classes" verbose="1" thread-count="1">
+	<test name="ChromeTest">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="testclasses.WebAdminLoginTest" />
+			<class name="testclasses.WebAdminBoardsTest" />
+			<class name="testclasses.WebAdminPostaNoteTest" />
+			<class name="testclasses.WebAdminSettingsTest" />
+			<class name="testclasses.WebAdminNavigationsTest" />
+			<class name="testclasses.WebEmployeeLoginTest" />
+			<class name="testclasses.WebEmployeeNavigationsTest" />
+			<class name="testclasses.WebEmployeeBoardsTest" />
+			<class name="testclasses.WebEmployeePostaNoteTest" />
+			<class name="testclasses.WebEmployeeSettingsTest" />
+		</classes>
+	</test>
+</suite>

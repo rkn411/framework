@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Main Test Suite]" parallel="classes">
+  <parameter name="browser" value="chrome"/>
+  <test name="ChromeTest">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testclasses.WebAdminLoginTest"/>
+      <class name="testclasses.WebAdminBoardsTest"/>
+      <class name="testclasses.WebAdminPostaNoteTest"/>
+      <class name="testclasses.WebAdminSettingsTest"/>
+      <class name="testclasses.WebAdminNavigationsTest"/>
+      <class name="testclasses.WebEmployeeLoginTest"/>
+      <class name="testclasses.WebEmployeeNavigationsTest"/>
+      <class name="testclasses.WebEmployeeBoardsTest"/>
+      <class name="testclasses.WebEmployeePostaNoteTest"/>
+      <class name="testclasses.WebEmployeeSettingsTest"/>
+    </classes>
+  </test> <!-- ChromeTest -->
+  <test name="ChromeTest(failed)" parallel="classes">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testclasses.WebAdminNavigationsTest">
+        <methods>
+          <include name="result"/>
+          <include name="tearDown"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- testclasses.WebAdminNavigationsTest -->
+      <class name="testclasses.WebAdminPostaNoteTest">
+        <methods>
+          <include name="verifyNewNoteWithBlankData"/>
+          <include name="verifyTodoFunctionalityWithData"/>
+          <include name="verifyCreateNewTaskFunctionalityWithData"/>
+          <include name="verifyCreateNewTaskFunctionalityWithBlankData"/>
+          <include name="launchApplication"/>
+          <include name="verifyNewNoteWithValidData"/>
+        </methods>
+      </class> <!-- testclasses.WebAdminPostaNoteTest -->
+      <class name="testclasses.WebEmployeeLoginTest">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="verifyWithValidHotelidInvalidPasswdAndUsername"/>
+          <include name="verifyWithBlankHotelidAndValidUsernameAndPassword"/>
+          <include name="verifyWithInValidHotelidAndblankPasswdAndUsername"/>
+          <include name="verifyWithValidData"/>
+          <include name="verifyEmployeeLoginWithBlankData"/>
+          <include name="verifyWithValidUsernameAndblankPasswdAndHotelid"/>
+          <include name="verifyEmployeeLoginWithInValidData"/>
+          <include name="verifyWithInValidHotelidAndPasswdAndValidUsername"/>
+        </methods>
+      </class> <!-- testclasses.WebEmployeeLoginTest -->
+      <class name="testclasses.WebAdminBoardsTest">
+        <methods>
+          <include name="result"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testclasses.WebAdminBoardsTest -->
+      <class name="testclasses.WebAdminLoginTest">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="result"/>
+        </methods>
+      </class> <!-- testclasses.WebAdminLoginTest -->
+      <class name="testclasses.WebEmployeeBoardsTest">
+        <methods>
+          <include name="clickingMsgBtn"/>
+          <include name="verifyConverttotaskFunctionality"/>
+          <include name="verifyUnresolvedButtonFunctionality"/>
+          <include name="launchApplication"/>
+          <include name="verifyCommentBtnWithValidData"/>
+          <include name="verifyEditBtnFunctionality"/>
+        </methods>
+      </class> <!-- testclasses.WebEmployeeBoardsTest -->
+      <class name="testclasses.WebEmployeeSettingsTest">
+        <methods>
+          <include name="verifyAccountsPage"/>
+          <include name="verifyProfilePage"/>
+          <include name="verifySignoutBtnFunctionality"/>
+          <include name="launchApplication"/>
+          <include name="verifyNotificationToggle"/>
+        </methods>
+      </class> <!-- testclasses.WebEmployeeSettingsTest -->
+      <class name="testclasses.WebAdminSettingsTest">
+        <methods>
+          <include name="verifyAccountsPage"/>
+          <include name="verifySignoutBtnFunctionality"/>
+          <include name="verifyProfilePage"/>
+          <include name="verifyChangehotelFunctionality"/>
+          <include name="verifyNotificationToggle"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- testclasses.WebAdminSettingsTest -->
+      <class name="testclasses.WebEmployeePostaNoteTest">
+        <methods>
+          <include name="verifyNewNoteWithValidData"/>
+          <include name="verifyTodoFunctionalityWithData"/>
+          <include name="verifyCreateNewTaskFunctionalityWithBlankData"/>
+          <include name="verifyCreateNewTaskFunctionalityWithData"/>
+          <include name="launchApplication"/>
+          <include name="verifyNewNoteWithBlankData"/>
+        </methods>
+      </class> <!-- testclasses.WebEmployeePostaNoteTest -->
+      <class name="testclasses.WebEmployeeNavigationsTest">
+        <methods>
+          <include name="verifyEmployeeLoginWithBlankValues"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- testclasses.WebEmployeeNavigationsTest -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+</suite> <!-- Failed suite [Main Test Suite] -->

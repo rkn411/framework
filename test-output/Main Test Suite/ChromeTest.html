@@ -1,0 +1,847 @@
+<html>
+<head>
+<title>TestNG:  ChromeTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>ChromeTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>17/0/33</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Jun 20 10:14:53 PDT 2017</td>
+</tr>
+<tr><td>Total time:</td><td>1145 seconds (1145350 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testclasses.WebAdminPostaNoteTest.launchApplication()'><b>launchApplication</b><br>Test class: testclasses.WebAdminPostaNoteTest<br>Parameters: chrome</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;Mallis-Mac-mini.local&apos;, ip: &apos;fe80:0:0:0:82e:2fea:315d:d5bb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.4&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:925)
+	at testclasses.WebAdminPostaNoteTest.launchApplication(WebAdminPostaNoteTest.java:55)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1479871966", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1479871966'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;Mallis-Mac-mini.local&apos;, ip: &apos;fe80:0:0:0:82e:2fea:315d:d5bb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.4&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:925)
+	at testclasses.WebAdminPostaNoteTest.launchApplication(WebAdminPostaNoteTest.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:178)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>0</td>
+<td>testclasses.WebAdminPostaNoteTest@1a3869f4</td></tr>
+<tr>
+<td title='testclasses.WebAdminSettingsTest.launchApplication()'><b>launchApplication</b><br>Test class: testclasses.WebAdminSettingsTest<br>Parameters: chrome</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;Mallis-Mac-mini.local&apos;, ip: &apos;fe80:0:0:0:82e:2fea:315d:d5bb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.4&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:925)
+	at testclasses.WebAdminSettingsTest.launchApplication(WebAdminSettingsTest.java:50)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1768596919", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1768596919'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;Mallis-Mac-mini.local&apos;, ip: &apos;fe80:0:0:0:82e:2fea:315d:d5bb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.4&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:925)
+	at testclasses.WebAdminSettingsTest.launchApplication(WebAdminSettingsTest.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:178)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>0</td>
+<td>testclasses.WebAdminSettingsTest@a38d7a3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeLoginTest.launchApplication()'><b>launchApplication</b><br>Test class: testclasses.WebEmployeeLoginTest<br>Parameters: chrome</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;Mallis-Mac-mini.local&apos;, ip: &apos;fe80:0:0:0:82e:2fea:315d:d5bb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.4&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:925)
+	at testclasses.WebEmployeeLoginTest.launchApplication(WebEmployeeLoginTest.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1300049686", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1300049686'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;Mallis-Mac-mini.local&apos;, ip: &apos;fe80:0:0:0:82e:2fea:315d:d5bb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.4&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:925)
+	at testclasses.WebEmployeeLoginTest.launchApplication(WebEmployeeLoginTest.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:178)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>0</td>
+<td>testclasses.WebEmployeeLoginTest@63440df3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeNavigationsTest.launchApplication()'><b>launchApplication</b><br>Test class: testclasses.WebEmployeeNavigationsTest<br>Parameters: chrome</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;Mallis-Mac-mini.local&apos;, ip: &apos;fe80:0:0:0:82e:2fea:315d:d5bb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.4&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:925)
+	at testclasses.WebEmployeeNavigationsTest.launchApplication(WebEmployeeNavigationsTest.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2049875080", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2049875080'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;Mallis-Mac-mini.local&apos;, ip: &apos;fe80:0:0:0:82e:2fea:315d:d5bb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.4&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:925)
+	at testclasses.WebEmployeeNavigationsTest.launchApplication(WebEmployeeNavigationsTest.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:178)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>0</td>
+<td>testclasses.WebEmployeeNavigationsTest@3aeaafa6</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeBoardsTest.launchApplication()'><b>launchApplication</b><br>Test class: testclasses.WebEmployeeBoardsTest<br>Parameters: chrome</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;Mallis-Mac-mini.local&apos;, ip: &apos;fe80:0:0:0:82e:2fea:315d:d5bb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.4&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:925)
+	at testclasses.WebEmployeeBoardsTest.launchApplication(WebEmployeeBoardsTest.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1366643916", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1366643916'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;Mallis-Mac-mini.local&apos;, ip: &apos;fe80:0:0:0:82e:2fea:315d:d5bb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.4&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:925)
+	at testclasses.WebEmployeeBoardsTest.launchApplication(WebEmployeeBoardsTest.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:178)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>0</td>
+<td>testclasses.WebEmployeeBoardsTest@76a3e297</td></tr>
+<tr>
+<td title='testclasses.WebEmployeePostaNoteTest.launchApplication()'><b>launchApplication</b><br>Test class: testclasses.WebEmployeePostaNoteTest<br>Parameters: chrome</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;Mallis-Mac-mini.local&apos;, ip: &apos;fe80:0:0:0:82e:2fea:315d:d5bb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.4&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:925)
+	at testclasses.WebEmployeePostaNoteTest.launchApplication(WebEmployeePostaNoteTest.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1300289008", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1300289008'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;Mallis-Mac-mini.local&apos;, ip: &apos;fe80:0:0:0:82e:2fea:315d:d5bb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.4&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:925)
+	at testclasses.WebEmployeePostaNoteTest.launchApplication(WebEmployeePostaNoteTest.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:178)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>0</td>
+<td>testclasses.WebEmployeePostaNoteTest@4d3167f4</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeSettingsTest.launchApplication()'><b>launchApplication</b><br>Test class: testclasses.WebEmployeeSettingsTest<br>Parameters: chrome</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;Mallis-Mac-mini.local&apos;, ip: &apos;fe80:0:0:0:82e:2fea:315d:d5bb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.4&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:925)
+	at testclasses.WebEmployeeSettingsTest.launchApplication(WebEmployeeSettingsTest.java:50)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace215343464", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace215343464'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;Mallis-Mac-mini.local&apos;, ip: &apos;fe80:0:0:0:82e:2fea:315d:d5bb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.4&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:925)
+	at testclasses.WebEmployeeSettingsTest.launchApplication(WebEmployeeSettingsTest.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:178)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div></td>
+<td>0</td>
+<td>testclasses.WebEmployeeSettingsTest@ed9d034</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testclasses.WebAdminPostaNoteTest.result()'><b>result</b><br>Test class: testclasses.WebAdminPostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminPostaNoteTest@1a3869f4</td></tr>
+<tr>
+<td title='testclasses.WebAdminPostaNoteTest.result()'><b>result</b><br>Test class: testclasses.WebAdminPostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminPostaNoteTest@1a3869f4</td></tr>
+<tr>
+<td title='testclasses.WebAdminPostaNoteTest.result()'><b>result</b><br>Test class: testclasses.WebAdminPostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminPostaNoteTest@1a3869f4</td></tr>
+<tr>
+<td title='testclasses.WebAdminPostaNoteTest.result()'><b>result</b><br>Test class: testclasses.WebAdminPostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminPostaNoteTest@1a3869f4</td></tr>
+<tr>
+<td title='testclasses.WebAdminPostaNoteTest.result()'><b>result</b><br>Test class: testclasses.WebAdminPostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminPostaNoteTest@1a3869f4</td></tr>
+<tr>
+<td title='testclasses.WebAdminSettingsTest.result()'><b>result</b><br>Test class: testclasses.WebAdminSettingsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminSettingsTest@a38d7a3</td></tr>
+<tr>
+<td title='testclasses.WebAdminSettingsTest.result()'><b>result</b><br>Test class: testclasses.WebAdminSettingsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminSettingsTest@a38d7a3</td></tr>
+<tr>
+<td title='testclasses.WebAdminSettingsTest.result()'><b>result</b><br>Test class: testclasses.WebAdminSettingsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminSettingsTest@a38d7a3</td></tr>
+<tr>
+<td title='testclasses.WebAdminSettingsTest.result()'><b>result</b><br>Test class: testclasses.WebAdminSettingsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminSettingsTest@a38d7a3</td></tr>
+<tr>
+<td title='testclasses.WebAdminSettingsTest.result()'><b>result</b><br>Test class: testclasses.WebAdminSettingsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminSettingsTest@a38d7a3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeLoginTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeeLoginTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeLoginTest@63440df3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeLoginTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeeLoginTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeLoginTest@63440df3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeLoginTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeeLoginTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeLoginTest@63440df3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeLoginTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeeLoginTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeLoginTest@63440df3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeLoginTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeeLoginTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeLoginTest@63440df3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeLoginTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeeLoginTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeLoginTest@63440df3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeLoginTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeeLoginTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeLoginTest@63440df3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeLoginTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeeLoginTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeLoginTest@63440df3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeNavigationsTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeeNavigationsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeNavigationsTest@3aeaafa6</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeBoardsTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeeBoardsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeBoardsTest@76a3e297</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeBoardsTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeeBoardsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeBoardsTest@76a3e297</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeBoardsTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeeBoardsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeBoardsTest@76a3e297</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeBoardsTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeeBoardsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeBoardsTest@76a3e297</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeBoardsTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeeBoardsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeBoardsTest@76a3e297</td></tr>
+<tr>
+<td title='testclasses.WebEmployeePostaNoteTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeePostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeePostaNoteTest@4d3167f4</td></tr>
+<tr>
+<td title='testclasses.WebEmployeePostaNoteTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeePostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeePostaNoteTest@4d3167f4</td></tr>
+<tr>
+<td title='testclasses.WebEmployeePostaNoteTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeePostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeePostaNoteTest@4d3167f4</td></tr>
+<tr>
+<td title='testclasses.WebEmployeePostaNoteTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeePostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeePostaNoteTest@4d3167f4</td></tr>
+<tr>
+<td title='testclasses.WebEmployeePostaNoteTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeePostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeePostaNoteTest@4d3167f4</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeSettingsTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeeSettingsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeSettingsTest@ed9d034</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeSettingsTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeeSettingsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeSettingsTest@ed9d034</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeSettingsTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeeSettingsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeSettingsTest@ed9d034</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeSettingsTest.result()'><b>result</b><br>Test class: testclasses.WebEmployeeSettingsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeSettingsTest@ed9d034</td></tr>
+<tr>
+<td title='testclasses.WebAdminPostaNoteTest.tearDown()'><b>tearDown</b><br>Test class: testclasses.WebAdminPostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminPostaNoteTest@1a3869f4</td></tr>
+<tr>
+<td title='testclasses.WebAdminSettingsTest.tearDown()'><b>tearDown</b><br>Test class: testclasses.WebAdminSettingsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminSettingsTest@a38d7a3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeLoginTest.tearDown()'><b>tearDown</b><br>Test class: testclasses.WebEmployeeLoginTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeLoginTest@63440df3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeNavigationsTest.tearDown()'><b>tearDown</b><br>Test class: testclasses.WebEmployeeNavigationsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeNavigationsTest@3aeaafa6</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeBoardsTest.tearDown()'><b>tearDown</b><br>Test class: testclasses.WebEmployeeBoardsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeBoardsTest@76a3e297</td></tr>
+<tr>
+<td title='testclasses.WebEmployeePostaNoteTest.tearDown()'><b>tearDown</b><br>Test class: testclasses.WebEmployeePostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeePostaNoteTest@4d3167f4</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeSettingsTest.tearDown()'><b>tearDown</b><br>Test class: testclasses.WebEmployeeSettingsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeSettingsTest@ed9d034</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testclasses.WebAdminLoginTest.blankEmailAndPassword()'><b>blankEmailAndPassword</b><br>Test class: testclasses.WebAdminLoginTest</td>
+<td></td>
+<td>2</td>
+<td>testclasses.WebAdminLoginTest@1e7c7811</td></tr>
+<tr>
+<td title='testclasses.WebAdminLoginTest.blankEmailAndValidPassword()'><b>blankEmailAndValidPassword</b><br>Test class: testclasses.WebAdminLoginTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminLoginTest@1e7c7811</td></tr>
+<tr>
+<td title='testclasses.WebAdminLoginTest.invalidEmailAndPassword()'><b>invalidEmailAndPassword</b><br>Test class: testclasses.WebAdminLoginTest</td>
+<td></td>
+<td>1</td>
+<td>testclasses.WebAdminLoginTest@1e7c7811</td></tr>
+<tr>
+<td title='testclasses.WebAdminNavigationsTest.preventivemaintainancefunctionality()'><b>preventivemaintainancefunctionality</b><br>Test class: testclasses.WebAdminNavigationsTest</td>
+<td></td>
+<td>372</td>
+<td>testclasses.WebAdminNavigationsTest@77f99a05</td></tr>
+<tr>
+<td title='testclasses.WebAdminLoginTest.validEmailAndBlankPassword()'><b>validEmailAndBlankPassword</b><br>Test class: testclasses.WebAdminLoginTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminLoginTest@1e7c7811</td></tr>
+<tr>
+<td title='testclasses.WebAdminLoginTest.validEmailAndInValidPassword()'><b>validEmailAndInValidPassword</b><br>Test class: testclasses.WebAdminLoginTest</td>
+<td></td>
+<td>2</td>
+<td>testclasses.WebAdminLoginTest@1e7c7811</td></tr>
+<tr>
+<td title='testclasses.WebAdminLoginTest.validEmailAndPassword()'><b>validEmailAndPassword</b><br>Test class: testclasses.WebAdminLoginTest</td>
+<td></td>
+<td>5</td>
+<td>testclasses.WebAdminLoginTest@1e7c7811</td></tr>
+<tr>
+<td title='testclasses.WebAdminNavigationsTest.verifyChecklistFunctionality()'><b>verifyChecklistFunctionality</b><br>Test class: testclasses.WebAdminNavigationsTest</td>
+<td></td>
+<td>513</td>
+<td>testclasses.WebAdminNavigationsTest@77f99a05</td></tr>
+<tr>
+<td title='testclasses.WebAdminBoardsTest.verifyCommentBtnFunctionality()'><b>verifyCommentBtnFunctionality</b><br>Test class: testclasses.WebAdminBoardsTest</td>
+<td></td>
+<td>121</td>
+<td>testclasses.WebAdminBoardsTest@77ec78b9</td></tr>
+<tr>
+<td title='testclasses.WebAdminBoardsTest.verifyConverttotaskFunctionality()'><b>verifyConverttotaskFunctionality</b><br>Test class: testclasses.WebAdminBoardsTest</td>
+<td></td>
+<td>48</td>
+<td>testclasses.WebAdminBoardsTest@77ec78b9</td></tr>
+<tr>
+<td title='testclasses.WebAdminBoardsTest.verifyEditBtnFunctionality()'><b>verifyEditBtnFunctionality</b><br>Test class: testclasses.WebAdminBoardsTest</td>
+<td></td>
+<td>4</td>
+<td>testclasses.WebAdminBoardsTest@77ec78b9</td></tr>
+<tr>
+<td title='testclasses.WebAdminBoardsTest.verifyFlagBtnFunctionality()'><b>verifyFlagBtnFunctionality</b><br>Test class: testclasses.WebAdminBoardsTest</td>
+<td></td>
+<td>12</td>
+<td>testclasses.WebAdminBoardsTest@77ec78b9</td></tr>
+<tr>
+<td title='testclasses.WebAdminLoginTest.verifyIForgotMyPasswordLink()'><b>verifyIForgotMyPasswordLink</b><br>Test class: testclasses.WebAdminLoginTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminLoginTest@1e7c7811</td></tr>
+<tr>
+<td title='testclasses.WebAdminNavigationsTest.verifyInspectionsFunctionality()'><b>verifyInspectionsFunctionality</b><br>Test class: testclasses.WebAdminNavigationsTest</td>
+<td></td>
+<td>11</td>
+<td>testclasses.WebAdminNavigationsTest@77f99a05</td></tr>
+<tr>
+<td title='testclasses.WebAdminNavigationsTest.verifyMenuListsNavigations()'><b>verifyMenuListsNavigations</b><br>Test class: testclasses.WebAdminNavigationsTest</td>
+<td></td>
+<td>15</td>
+<td>testclasses.WebAdminNavigationsTest@77f99a05</td></tr>
+<tr>
+<td title='testclasses.WebAdminBoardsTest.verifyMessageBtnFunctionality()'><b>verifyMessageBtnFunctionality</b><br>Test class: testclasses.WebAdminBoardsTest</td>
+<td></td>
+<td>5</td>
+<td>testclasses.WebAdminBoardsTest@77ec78b9</td></tr>
+<tr>
+<td title='testclasses.WebAdminBoardsTest.verifyUnresolvedButtonFunctionality()'><b>verifyUnresolvedButtonFunctionality</b><br>Test class: testclasses.WebAdminBoardsTest</td>
+<td></td>
+<td>5</td>
+<td>testclasses.WebAdminBoardsTest@77ec78b9</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testclasses.WebEmployeeBoardsTest.clickingMsgBtn()'><b>clickingMsgBtn</b><br>Test class: testclasses.WebEmployeeBoardsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeBoardsTest@76a3e297</td></tr>
+<tr>
+<td title='testclasses.WebAdminSettingsTest.verifyAccountsPage()'><b>verifyAccountsPage</b><br>Test class: testclasses.WebAdminSettingsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminSettingsTest@a38d7a3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeSettingsTest.verifyAccountsPage()'><b>verifyAccountsPage</b><br>Test class: testclasses.WebEmployeeSettingsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeSettingsTest@ed9d034</td></tr>
+<tr>
+<td title='testclasses.WebAdminSettingsTest.verifyChangehotelFunctionality()'><b>verifyChangehotelFunctionality</b><br>Test class: testclasses.WebAdminSettingsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminSettingsTest@a38d7a3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeBoardsTest.verifyCommentBtnWithValidData()'><b>verifyCommentBtnWithValidData</b><br>Test class: testclasses.WebEmployeeBoardsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeBoardsTest@76a3e297</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeBoardsTest.verifyConverttotaskFunctionality()'><b>verifyConverttotaskFunctionality</b><br>Test class: testclasses.WebEmployeeBoardsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeBoardsTest@76a3e297</td></tr>
+<tr>
+<td title='testclasses.WebAdminPostaNoteTest.verifyCreateNewTaskFunctionalityWithBlankData()'><b>verifyCreateNewTaskFunctionalityWithBlankData</b><br>Test class: testclasses.WebAdminPostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminPostaNoteTest@1a3869f4</td></tr>
+<tr>
+<td title='testclasses.WebEmployeePostaNoteTest.verifyCreateNewTaskFunctionalityWithBlankData()'><b>verifyCreateNewTaskFunctionalityWithBlankData</b><br>Test class: testclasses.WebEmployeePostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeePostaNoteTest@4d3167f4</td></tr>
+<tr>
+<td title='testclasses.WebAdminPostaNoteTest.verifyCreateNewTaskFunctionalityWithData()'><b>verifyCreateNewTaskFunctionalityWithData</b><br>Test class: testclasses.WebAdminPostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminPostaNoteTest@1a3869f4</td></tr>
+<tr>
+<td title='testclasses.WebEmployeePostaNoteTest.verifyCreateNewTaskFunctionalityWithData()'><b>verifyCreateNewTaskFunctionalityWithData</b><br>Test class: testclasses.WebEmployeePostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeePostaNoteTest@4d3167f4</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeBoardsTest.verifyEditBtnFunctionality()'><b>verifyEditBtnFunctionality</b><br>Test class: testclasses.WebEmployeeBoardsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeBoardsTest@76a3e297</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeLoginTest.verifyEmployeeLoginWithBlankData()'><b>verifyEmployeeLoginWithBlankData</b><br>Test class: testclasses.WebEmployeeLoginTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeLoginTest@63440df3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeNavigationsTest.verifyEmployeeLoginWithBlankValues()'><b>verifyEmployeeLoginWithBlankValues</b><br>Test class: testclasses.WebEmployeeNavigationsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeNavigationsTest@3aeaafa6</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeLoginTest.verifyEmployeeLoginWithInValidData()'><b>verifyEmployeeLoginWithInValidData</b><br>Test class: testclasses.WebEmployeeLoginTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeLoginTest@63440df3</td></tr>
+<tr>
+<td title='testclasses.WebAdminPostaNoteTest.verifyNewNoteWithBlankData()'><b>verifyNewNoteWithBlankData</b><br>Test class: testclasses.WebAdminPostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminPostaNoteTest@1a3869f4</td></tr>
+<tr>
+<td title='testclasses.WebEmployeePostaNoteTest.verifyNewNoteWithBlankData()'><b>verifyNewNoteWithBlankData</b><br>Test class: testclasses.WebEmployeePostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeePostaNoteTest@4d3167f4</td></tr>
+<tr>
+<td title='testclasses.WebAdminPostaNoteTest.verifyNewNoteWithValidData()'><b>verifyNewNoteWithValidData</b><br>Test class: testclasses.WebAdminPostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminPostaNoteTest@1a3869f4</td></tr>
+<tr>
+<td title='testclasses.WebEmployeePostaNoteTest.verifyNewNoteWithValidData()'><b>verifyNewNoteWithValidData</b><br>Test class: testclasses.WebEmployeePostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeePostaNoteTest@4d3167f4</td></tr>
+<tr>
+<td title='testclasses.WebAdminSettingsTest.verifyNotificationToggle()'><b>verifyNotificationToggle</b><br>Test class: testclasses.WebAdminSettingsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminSettingsTest@a38d7a3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeSettingsTest.verifyNotificationToggle()'><b>verifyNotificationToggle</b><br>Test class: testclasses.WebEmployeeSettingsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeSettingsTest@ed9d034</td></tr>
+<tr>
+<td title='testclasses.WebAdminSettingsTest.verifyProfilePage()'><b>verifyProfilePage</b><br>Test class: testclasses.WebAdminSettingsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminSettingsTest@a38d7a3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeSettingsTest.verifyProfilePage()'><b>verifyProfilePage</b><br>Test class: testclasses.WebEmployeeSettingsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeSettingsTest@ed9d034</td></tr>
+<tr>
+<td title='testclasses.WebAdminSettingsTest.verifySignoutBtnFunctionality()'><b>verifySignoutBtnFunctionality</b><br>Test class: testclasses.WebAdminSettingsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminSettingsTest@a38d7a3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeSettingsTest.verifySignoutBtnFunctionality()'><b>verifySignoutBtnFunctionality</b><br>Test class: testclasses.WebEmployeeSettingsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeSettingsTest@ed9d034</td></tr>
+<tr>
+<td title='testclasses.WebAdminPostaNoteTest.verifyTodoFunctionalityWithData()'><b>verifyTodoFunctionalityWithData</b><br>Test class: testclasses.WebAdminPostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebAdminPostaNoteTest@1a3869f4</td></tr>
+<tr>
+<td title='testclasses.WebEmployeePostaNoteTest.verifyTodoFunctionalityWithData()'><b>verifyTodoFunctionalityWithData</b><br>Test class: testclasses.WebEmployeePostaNoteTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeePostaNoteTest@4d3167f4</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeBoardsTest.verifyUnresolvedButtonFunctionality()'><b>verifyUnresolvedButtonFunctionality</b><br>Test class: testclasses.WebEmployeeBoardsTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeBoardsTest@76a3e297</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeLoginTest.verifyWithBlankHotelidAndValidUsernameAndPassword()'><b>verifyWithBlankHotelidAndValidUsernameAndPassword</b><br>Test class: testclasses.WebEmployeeLoginTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeLoginTest@63440df3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeLoginTest.verifyWithInValidHotelidAndPasswdAndValidUsername()'><b>verifyWithInValidHotelidAndPasswdAndValidUsername</b><br>Test class: testclasses.WebEmployeeLoginTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeLoginTest@63440df3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeLoginTest.verifyWithInValidHotelidAndblankPasswdAndUsername()'><b>verifyWithInValidHotelidAndblankPasswdAndUsername</b><br>Test class: testclasses.WebEmployeeLoginTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeLoginTest@63440df3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeLoginTest.verifyWithValidData()'><b>verifyWithValidData</b><br>Test class: testclasses.WebEmployeeLoginTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeLoginTest@63440df3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeLoginTest.verifyWithValidHotelidInvalidPasswdAndUsername()'><b>verifyWithValidHotelidInvalidPasswdAndUsername</b><br>Test class: testclasses.WebEmployeeLoginTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeLoginTest@63440df3</td></tr>
+<tr>
+<td title='testclasses.WebEmployeeLoginTest.verifyWithValidUsernameAndblankPasswdAndHotelid()'><b>verifyWithValidUsernameAndblankPasswdAndHotelid</b><br>Test class: testclasses.WebEmployeeLoginTest</td>
+<td></td>
+<td>0</td>
+<td>testclasses.WebEmployeeLoginTest@63440df3</td></tr>
+</table><p>
+</body>
+</html>

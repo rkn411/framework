@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SmokeSuite" verbose="1">
+	<parameter name="mobilePlatform" value="iOS">
+		<test name="SmokeRegistration">
+			<classes>
+				<class name="testclasses.IosAdminBoardsPageTest" />
+				</classes>
+		</test>
+	</parameter>
+</suite>
